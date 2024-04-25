@@ -66,7 +66,7 @@ onMounted(() => {
           router
           style="height: 100%; padding-top: 0.625rem"
         >
-          <el-menu-item class="aside-item" index="/info_view">
+          <el-menu-item class="aside-item" index="/info_view" v-if="false">
             <span>信息总览</span>
           </el-menu-item>
           <el-menu-item

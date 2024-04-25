@@ -3,6 +3,8 @@ import { generateElectricitySubmitAPI } from "@/apis/enterprise/submit";
 import type { GenerateElectricitySubmitParams } from "@/types/enterprise/submit/generateElectricity";
 import type { FormInstance, FormRules } from "element-plus";
 import { ref } from "vue";
+import { ElMessage } from "element-plus";
+
 const formData = ref<GenerateElectricitySubmitParams>({
   coal_burning: 0,
   crude_oil: 0,
@@ -123,7 +125,7 @@ const submitForm = async (form: FormInstance | null) => {
   await form?.validate();
   await generateElectricitySubmitAPI(formData.value);
   resetForm();
-  console.log(formData.value);
+  ElMessage.success("提交成功");
 };
 
 const resetForm = () => {

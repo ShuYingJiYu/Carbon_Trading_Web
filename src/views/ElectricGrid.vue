@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { electricGridSubmitAPI } from "@/apis/enterprise/submit";
 import type { ElectricGridSubmitParams } from "@/types/enterprise/submit/electricGrid";
-import type { FormInstance, FormRules } from "element-plus";
+import { ElMessage, type FormInstance, type FormRules } from "element-plus";
 import { ref } from "vue";
 const formData = ref<ElectricGridSubmitParams>({
   PPGCP: 0,
@@ -104,7 +104,7 @@ const submitForm = async (form: FormInstance | null) => {
   await form?.validate();
   await electricGridSubmitAPI(formData.value);
   resetForm();
-  console.log(formData.value);
+  ElMessage.success("提交成功");
 };
 
 const resetForm = () => {

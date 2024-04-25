@@ -49,6 +49,14 @@ const router = createRouter({
       path: "/login",
       component: () => import("../views/LoginView.vue"),
     },
+    {
+      path: "/visual_trade",
+      component: () => import("../views/VisualTrade.vue"),
+    },
+    {
+      path: "/visual_enterprise",
+      component: () => import("../views/VisualEnterprise.vue"),
+    }
   ],
 });
 

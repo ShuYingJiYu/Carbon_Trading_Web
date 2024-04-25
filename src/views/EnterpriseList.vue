@@ -20,6 +20,9 @@ const getList = async () => {
         },
       },
     },
+    grid: {
+      height: "60%"
+    },
     toolbox: {
       feature: {
         dataView: { show: true, readOnly: false },
@@ -68,6 +71,9 @@ const getList = async () => {
         },
       },
     },
+    grid: {
+      height: "60%"
+    },
     toolbox: {
       feature: {
         dataView: { show: true, readOnly: false },
@@ -105,6 +111,9 @@ const getList = async () => {
   option3.value = {
     title: {
       text: "企业数据提交数量排行",
+    },
+    grid: {
+      height: "60%"
     },
     tooltip: {
       trigger: "axis",
