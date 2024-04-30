@@ -36,6 +36,7 @@ onMounted(() => {
 </script>
 
 <template>
+  
   <el-container
     style="position: relative; top: 0; left: 0; width: 100%; height: 100%"
   >
@@ -46,6 +47,30 @@ onMounted(() => {
       >
         碳交易平台
       </div>
+      <el-button
+        style="
+          position: absolute;
+          top: 25px;
+          left: 300px;
+          width: 120px;
+          color: black;
+        "
+        type="primary"
+        disabled
+        >企业数据总览</el-button
+      >
+      <el-button
+        @click="router.push('/view')"
+        style="
+          position: absolute;
+          top: 25px;
+          left: 420px;
+          width: 120px;
+          color: black;
+        "
+        type="danger"
+        >区块链数据总览</el-button
+      >
       <div class="header-user">
         <div class="text">身份: {{ clientStore.identity }}</div>
         <div class="text">用户名: {{ clientInfo?.name }}</div>

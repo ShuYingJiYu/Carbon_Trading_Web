@@ -3,7 +3,7 @@ import axios from "axios";
 import router from "@/router";
 import { ElMessage } from "element-plus";
 
-const baseURL = "http://localhost:8080";
+const baseURL = "https://trading.sakurapuare.com/api/";
 
 const instance = axios.create({
   baseURL,
@@ -26,7 +26,7 @@ instance.interceptors.response.use(
     if (res.data.code === 200) {
       return res;
     }
-    ElMessage({ message: res.data.msg || "服务异常", type: "error" });
+   
     return Promise.reject(res.data);
   },
   (err) => {
